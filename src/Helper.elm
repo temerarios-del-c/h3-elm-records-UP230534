@@ -1,5 +1,8 @@
 module Helper exposing (..)
 
+import Html
+import Html.Attributes
+
 
 langs : List { name : String, releaseYear : Int, currentVersion : String }
 langs =
@@ -61,3 +64,30 @@ add3 num1 num2 num3 =
 calc : number -> number -> (number -> number -> number) -> number
 calc num1 num2 operador =
     operador num1 num2
+
+
+type alias Computer =
+    { ram : String, model : String, brand : String, screenSize : String }
+
+
+myLaptop : Computer
+myLaptop =
+    { ram = "16gb", model = "Hp Victus", brand = "HP", screenSize = "16 inches" }
+
+
+main : Html.Html msg
+main =
+    Html.div
+        []
+        [ Html.h1
+            []
+            [ Html.text "My Laptop" ]
+        , Html.div []
+            [ Html.ul []
+                [ Html.li [] [ Html.text ("Ram: " ++ myLaptop.ram) ]
+                , Html.li [] [ Html.text ("Modelo: " ++ myLaptop.model) ]
+                , Html.li [] [ Html.text ("Marca: " ++ myLaptop.brand) ]
+                , Html.li [] [ Html.text ("Pulgadas: " ++ myLaptop.screenSize) ]
+                ]
+            ]
+        ]
