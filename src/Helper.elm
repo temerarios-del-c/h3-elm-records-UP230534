@@ -81,7 +81,7 @@ main =
         []
         [ Html.h1
             []
-            [ Html.text "My computer" ]
+            [ Html.text "My laptop" ]
         , Html.div []
             [ Html.ul []
                 [ Html.li [] [ Html.text ("Ram: " ++ myLaptop.ram) ]
