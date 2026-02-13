@@ -46,3 +46,18 @@ videogames =
 getVideogameGenres : List Videogame -> List (List String)
 getVideogameGenres list =
     List.map .genres list
+
+
+add2 : number -> number -> number
+add2 num1 num2 =
+    num1 + num2
+
+
+add3 : number -> number -> number -> number
+add3 num1 num2 num3 =
+    num1 + num2 + num3
+
+
+calc : number -> number -> (number -> number -> number) -> number
+calc num1 num2 operador =
+    operador num1 num2
