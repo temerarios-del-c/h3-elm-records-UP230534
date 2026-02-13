@@ -27,7 +27,7 @@ onlyStudents list =
                 tipo.name
 
             else
-                " "
+                ""
         )
         list
 
